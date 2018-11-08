@@ -108,17 +108,18 @@
 
 
 
-  <meta name="description" content="君当作磐石，妾当作蒲苇">
-<meta name="keywords" content="我是关键词">
-<meta property="og:type" content="website">
-<meta property="og:title" content="老婆最大">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="前言The palest ink is better than the best memory.（好记性不如烂笔头。） 复制粘贴Ditto 快捷键：Ctrl + `">
+<meta name="keywords" content="tool,tools,ditto,wmic,capture">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工作中常用的一些小工具">
+<meta property="og:url" content="http://yoursite.com/2018/11/05/Some-tools-to-use-in-your-work/index.html">
 <meta property="og:site_name" content="老婆最大">
-<meta property="og:description" content="君当作磐石，妾当作蒲苇">
+<meta property="og:description" content="前言The palest ink is better than the best memory.（好记性不如烂笔头。） 复制粘贴Ditto 快捷键：Ctrl + `">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-06T07:11:58.100Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="老婆最大">
-<meta name="twitter:description" content="君当作磐石，妾当作蒲苇">
+<meta name="twitter:title" content="工作中常用的一些小工具">
+<meta name="twitter:description" content="前言The palest ink is better than the best memory.（好记性不如烂笔头。） 复制粘贴Ditto 快捷键：Ctrl + `">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/05/Some-tools-to-use-in-your-work/">
 
 
 
@@ -137,7 +138,7 @@
   };
 </script>
 
-  <title>老婆最大</title>
+  <title>工作中常用的一些小工具 | 老婆最大</title>
   
 
 
@@ -186,8 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
    <a href="https://github.com/desertsnow917"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a> 
@@ -230,7 +230,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
@@ -306,316 +306,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/让hexo一直在后台运行/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DesertSnow">
-      <meta itemprop="description" content="君当作磐石，妾当作蒲苇">
-      <meta itemprop="image" content="https://www.baidu.com/img/bd_logo1.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="老婆最大">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/08/让hexo一直在后台运行/" itemprop="url">
-                  <font color="GREEN">让hexo一直在后台运行</font>
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-08 10:20:42 / 修改时间：11:18:07" itemprop="dateCreated datePublished" datetime="2018-11-08T10:20:42+08:00">2018-11-08</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>Hexo的进程无法常驻后台，博客进程就挂了，<font color="red" size="5px">扎心有木有！</font></strong></p>
-<p><strong>今天就给大家介绍一个方法，那就是用<font color="green" size="5px">pm2</font>来接管<font color="orange" size="5px">hexo</font>的进程。</strong></p>
-<h3 id="1-安装pm2"><a href="#1-安装pm2" class="headerlink" title="1) 安装pm2"></a>1) 安装pm2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g pm2</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/08/让hexo一直在后台运行/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/Windows及Linux机器下查看端口占用/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DesertSnow">
-      <meta itemprop="description" content="君当作磐石，妾当作蒲苇">
-      <meta itemprop="image" content="https://www.baidu.com/img/bd_logo1.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="老婆最大">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/06/Windows及Linux机器下查看端口占用/" itemprop="url">
-                  Windows及Linux机器下查看端口占用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-06 09:40:14" itemprop="dateCreated datePublished" datetime="2018-11-06T09:40:14+08:00">2018-11-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-11-07 17:19:56" itemprop="dateModified" datetime="2018-11-07T17:19:56+08:00">2018-11-07</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Windows查看端口占用"><a href="#Windows查看端口占用" class="headerlink" title="Windows查看端口占用"></a>Windows查看端口占用</h2><ol>
-<li><strong>查看端口3306被哪个进程占用；由下图可以看出，被进程为5004的占用</strong>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/06/Windows及Linux机器下查看端口占用/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </li></ol></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -647,11 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/05/Some-tools-to-use-in-your-work/" itemprop="url">
-                  工作中常用的一些小工具
-                </a>
+          <h1 class="post-title" itemprop="name headline">工作中常用的一些小工具
               
             
           </h1>
@@ -744,20 +433,21 @@
       
 
       
-        
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>The palest ink is better than the best memory.</code>（好记性不如烂笔头。）</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>The palest ink is better than the best memory.</code>（好记性不如烂笔头。）</p>
 <h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h3><p><a href="https://ditto-cp.sourceforge.io/" target="_blank" rel="noopener">Ditto</a></p>
 <p>快捷键：<code>Ctrl</code> + `</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/05/Some-tools-to-use-in-your-work/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
+<a id="more"></a>
+<h3 id="截图工具"><a href="#截图工具" class="headerlink" title="截图工具"></a>截图工具</h3><p><code>FastStone Capture</code></p>
+<p>快捷键：<code>Ctrl</code> + <code>PrintScreen</code></p>
+<p>1）使用方向键移动光标</p>
+<p>2）按回车或空格键确认角点</p>
+<p>2）按<code>Esc</code>键取消</p>
+<h3 id="命令工具"><a href="#命令工具" class="headerlink" title="命令工具"></a>命令工具</h3><p><code>wmic</code></p>
+<p>打开有道词典：<code>wmic process call create &quot;E:\Program_Files\YoudaoNote\YoudaoNote.exe&quot;</code></p>
+<p>打开谷歌浏览器： <code>wmic process call create &quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;</code></p>
+<p>关闭<code>CMD</code>窗口：<code>wmic process where name=&quot;cmd.exe&quot; call terminate</code></p>
+<p>重命名文件：<code>wmic datafile &quot;E:\\aaa.txt&quot; call rename &quot;E:\\bbb.txt&quot;</code></p>
+
       
     </div>
 
@@ -775,191 +465,48 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DesertSnow">
-      <meta itemprop="description" content="君当作磐石，妾当作蒲苇">
-      <meta itemprop="image" content="https://www.baidu.com/img/bd_logo1.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="老婆最大">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-04 15:30:11" itemprop="dateCreated datePublished" datetime="2018-11-04T15:30:11+08:00">2018-11-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-11-06 15:57:27" itemprop="dateModified" datetime="2018-11-06T15:57:27+08:00">2018-11-06</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/kafka/" itemprop="url" rel="index"><span itemprop="name">kafka</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/tool/" rel="tag"># tool</a>
           
-
+            <a href="/tags/tools/" rel="tag"># tools</a>
           
-            
+            <a href="/tags/ditto/" rel="tag"># ditto</a>
           
-
+            <a href="/tags/wmic/" rel="tag"># wmic</a>
           
+            <a href="/tags/capture/" rel="tag"># capture</a>
           
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/04/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/04/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/06/Windows及Linux机器下查看端口占用/" rel="prev" title="Windows及Linux机器下查看端口占用">
+                Windows及Linux机器下查看端口占用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -969,14 +516,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -997,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1126,6 +683,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复制粘贴"><span class="nav-number">1.1.</span> <span class="nav-text">复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#截图工具"><span class="nav-number">1.2.</span> <span class="nav-text">截图工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令工具"><span class="nav-number">1.3.</span> <span class="nav-text">命令工具</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1263,6 +836,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 
