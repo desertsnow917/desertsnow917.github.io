@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lovelimei.cn:4000/"/>
-  <updated>2019-02-28T07:20:17.395Z</updated>
+  <updated>2019-02-28T07:29:31.468Z</updated>
   <id>http://lovelimei.cn:4000/</id>
   
   <author>
@@ -21,12 +21,19 @@
     <link href="http://lovelimei.cn:4000/2019/02/28/MySQL%E5%85%B1%E4%BA%AB%E9%94%81%E4%B8%8E%E6%8E%92%E4%BB%96%E9%94%81/"/>
     <id>http://lovelimei.cn:4000/2019/02/28/MySQL共享锁与排他锁/</id>
     <published>2019-02-28T07:20:17.000Z</published>
-    <updated>2019-02-28T07:20:17.395Z</updated>
+    <updated>2019-02-28T07:29:31.468Z</updated>
+    
+    <content type="html"><![CDATA[<p>MySQL锁机制分为表级锁和行级锁。</p><p>共享锁又称为读锁，简称S锁，顾名思义，共享锁就是多个事务对于同一数据可以共享一把锁，都能访问到数据，但是只能读不能修改。<br><a id="more"></a></p><p>排他锁又称为写锁，简称X锁，顾名思义，排他锁就是不能与其他所并存，如一个事务获取了一个数据行的排他锁，其他事务就不能再获取该行的其他锁，包括共享锁和排他锁，但是获取排他锁的事务是可以对数据就行读取和修改。</p><p>对于共享锁大家可能很好理解，就是多个事务只能读数据不能改数据。排他锁指的是一个事务在一行数据加上排他锁后，其他事务不能再在其上加其他的锁。mysql InnoDB引擎默认的修改数据语句，update,delete,insert都会自动给涉及到的数据加上排他锁，select语句默认不会加任何锁类型，如果加排他锁可以使用select …for update语句，加共享锁可以使用select … lock in share mode语句。所以加过排他锁的数据行在其他事务种是不能修改数据的，也不能通过for update和lock in share mode锁的方式查询数据，但可以直接通过select …from…查询数据，因为普通查询没有任何锁机制。</p><h2 id="Storage-Engine"><a href="#Storage-Engine" class="headerlink" title="Storage Engine"></a>Storage Engine</h2><p>show engines;<br>show variables like ‘slow_query%’;<br>show variables like ‘%storage%’;<br>show create table user;</p><h2 id="共享锁"><a href="#共享锁" class="headerlink" title="共享锁"></a>共享锁</h2><p>begin;<br>select * from user where id = 1 lock in share mode;<br>commit;<br>rollback;</p><h2 id="排他锁"><a href="#排他锁" class="headerlink" title="排他锁"></a>排他锁</h2><p>begin;<br>select * from user where id = 1 for update;<br>commit;<br>rollback;</p><h2 id="排他锁-1"><a href="#排他锁-1" class="headerlink" title="排他锁"></a>排他锁</h2><p>begin;<br>update user set name = ‘markl’ where id = 1;<br>commit;<br>rollback;</p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;MySQL锁机制分为表级锁和行级锁。&lt;/p&gt;
+&lt;p&gt;共享锁又称为读锁，简称S锁，顾名思义，共享锁就是多个事务对于同一数据可以共享一把锁，都能访问到数据，但是只能读不能修改。&lt;br&gt;
+    
     </summary>
     
+    
+      <category term="MySQL" scheme="http://lovelimei.cn:4000/tags/MySQL/"/>
     
   </entry>
   

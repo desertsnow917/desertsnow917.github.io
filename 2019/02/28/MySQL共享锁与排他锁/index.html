@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="君当作磐石，妾当作蒲苇">
-<meta name="keywords" content="我是关键词">
+  <meta name="description" content="MySQL锁机制分为表级锁和行级锁。 共享锁又称为读锁，简称S锁，顾名思义，共享锁就是多个事务对于同一数据可以共享一把锁，都能访问到数据，但是只能读不能修改。">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL共享锁与排他锁">
 <meta property="og:url" content="http://lovelimei.cn:4000/2019/02/28/MySQL共享锁与排他锁/index.html">
 <meta property="og:site_name" content="重剑无锋">
-<meta property="og:description" content="君当作磐石，妾当作蒲苇">
+<meta property="og:description" content="MySQL锁机制分为表级锁和行级锁。 共享锁又称为读锁，简称S锁，顾名思义，共享锁就是多个事务对于同一数据可以共享一把锁，都能访问到数据，但是只能读不能修改。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-28T07:20:17.395Z">
+<meta property="og:updated_time" content="2019-02-28T07:29:31.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL共享锁与排他锁">
-<meta name="twitter:description" content="君当作磐石，妾当作蒲苇">
+<meta name="twitter:description" content="MySQL锁机制分为表级锁和行级锁。 共享锁又称为读锁，简称S锁，顾名思义，共享锁就是多个事务对于同一数据可以共享一把锁，都能访问到数据，但是只能读不能修改。">
 
 
 
@@ -368,9 +368,13 @@
                 
               
 
-              <time title="创建时间：2019-02-28 15:20:17" itemprop="dateCreated datePublished" datetime="2019-02-28T15:20:17+08:00">2019-02-28</time>
+              <time title="创建时间：2019-02-28 15:20:17 / 修改时间：15:29:31" itemprop="dateCreated datePublished" datetime="2019-02-28T15:20:17+08:00">2019-02-28</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -402,7 +406,15 @@
       
 
       
-        
+        <p>MySQL锁机制分为表级锁和行级锁。</p>
+<p>共享锁又称为读锁，简称S锁，顾名思义，共享锁就是多个事务对于同一数据可以共享一把锁，都能访问到数据，但是只能读不能修改。<br><a id="more"></a></p>
+<p>排他锁又称为写锁，简称X锁，顾名思义，排他锁就是不能与其他所并存，如一个事务获取了一个数据行的排他锁，其他事务就不能再获取该行的其他锁，包括共享锁和排他锁，但是获取排他锁的事务是可以对数据就行读取和修改。</p>
+<p>对于共享锁大家可能很好理解，就是多个事务只能读数据不能改数据。排他锁指的是一个事务在一行数据加上排他锁后，其他事务不能再在其上加其他的锁。mysql InnoDB引擎默认的修改数据语句，update,delete,insert都会自动给涉及到的数据加上排他锁，select语句默认不会加任何锁类型，如果加排他锁可以使用select …for update语句，加共享锁可以使用select … lock in share mode语句。所以加过排他锁的数据行在其他事务种是不能修改数据的，也不能通过for update和lock in share mode锁的方式查询数据，但可以直接通过select …from…查询数据，因为普通查询没有任何锁机制。</p>
+<h2 id="Storage-Engine"><a href="#Storage-Engine" class="headerlink" title="Storage Engine"></a>Storage Engine</h2><p>show engines;<br>show variables like ‘slow_query%’;<br>show variables like ‘%storage%’;<br>show create table user;</p>
+<h2 id="共享锁"><a href="#共享锁" class="headerlink" title="共享锁"></a>共享锁</h2><p>begin;<br>select * from user where id = 1 lock in share mode;<br>commit;<br>rollback;</p>
+<h2 id="排他锁"><a href="#排他锁" class="headerlink" title="排他锁"></a>排他锁</h2><p>begin;<br>select * from user where id = 1 for update;<br>commit;<br>rollback;</p>
+<h2 id="排他锁-1"><a href="#排他锁-1" class="headerlink" title="排他锁"></a>排他锁</h2><p>begin;<br>update user set name = ‘markl’ where id = 1;<br>commit;<br>rollback;</p>
+
       
     </div>
 
@@ -419,6 +431,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+        </div>
       
 
       
@@ -482,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -554,7 +581,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -619,6 +648,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Storage-Engine"><span class="nav-number">1.</span> <span class="nav-text">Storage Engine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共享锁"><span class="nav-number">2.</span> <span class="nav-text">共享锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排他锁"><span class="nav-number">3.</span> <span class="nav-text">排他锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排他锁-1"><span class="nav-number">4.</span> <span class="nav-text">排他锁</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
