@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="Windows查看端口占用 查看端口3306被哪个进程占用；由下图可以看出，被进程为5004的占用">
-<meta name="keywords" content="端口占用">
+  <meta name="description" content="In addition to the usual Spring Framework events, such as ContextRefreshedEvent, a SpringApplication sends some additional application events.  Some events are actually triggered before the Applicatio">
+<meta name="keywords" content="SpringBoot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows及Linux机器下查看端口占用">
-<meta property="og:url" content="http://lovelimei.cn:4000/2018/11/06/Windows及Linux机器下查看端口占用/index.html">
+<meta property="og:title" content="Spring Boot Application Events and Listeners">
+<meta property="og:url" content="http://lovelimei.cn:4000/2018/11/13/Spring-Boot-Application-Events-and-Listeners/index.html">
 <meta property="og:site_name" content="重剑无锋">
-<meta property="og:description" content="Windows查看端口占用 查看端口3306被哪个进程占用；由下图可以看出，被进程为5004的占用">
+<meta property="og:description" content="In addition to the usual Spring Framework events, such as ContextRefreshedEvent, a SpringApplication sends some additional application events.  Some events are actually triggered before the Applicatio">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-07T09:19:56.027Z">
+<meta property="og:updated_time" content="2018-11-13T09:44:33.254Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows及Linux机器下查看端口占用">
-<meta name="twitter:description" content="Windows查看端口占用 查看端口3306被哪个进程占用；由下图可以看出，被进程为5004的占用">
+<meta name="twitter:title" content="Spring Boot Application Events and Listeners">
+<meta name="twitter:description" content="In addition to the usual Spring Framework events, such as ContextRefreshedEvent, a SpringApplication sends some additional application events.  Some events are actually triggered before the Applicatio">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://lovelimei.cn:4000/2018/11/06/Windows及Linux机器下查看端口占用/">
+  <link rel="canonical" href="http://lovelimei.cn:4000/2018/11/13/Spring-Boot-Application-Events-and-Listeners/">
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>Windows及Linux机器下查看端口占用 | 重剑无锋</title>
+  <title>Spring Boot Application Events and Listeners | 重剑无锋</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lovelimei.cn:4000/2018/11/06/Windows及Linux机器下查看端口占用/">
+    <link itemprop="mainEntityOfPage" href="http://lovelimei.cn:4000/2018/11/13/Spring-Boot-Application-Events-and-Listeners/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DesertSnow">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Windows及Linux机器下查看端口占用
+          <h1 class="post-title" itemprop="name headline">Spring Boot Application Events and Listeners
               
             
           </h1>
@@ -368,28 +368,41 @@
                 
               
 
-              <time title="创建时间：2018-11-06 09:40:14" itemprop="dateCreated datePublished" datetime="2018-11-06T09:40:14+08:00">2018-11-06</time>
+              <time title="创建时间：2018-11-13 17:23:32 / 修改时间：17:44:33" itemprop="dateCreated datePublished" datetime="2018-11-13T17:23:32+08:00">2018-11-13</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-11-07 17:19:56" itemprop="dateModified" datetime="2018-11-07T17:19:56+08:00">2018-11-07</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Spring/" itemprop="url" rel="index"><span itemprop="name">Spring</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Spring/SpringBoot/" itemprop="url" rel="index"><span itemprop="name">SpringBoot</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -418,19 +431,26 @@
       
 
       
-        <h2 id="Windows查看端口占用"><a href="#Windows查看端口占用" class="headerlink" title="Windows查看端口占用"></a>Windows查看端口占用</h2><ol>
-<li><strong>查看端口3306被哪个进程占用；由下图可以看出，被进程为5004的占用</strong><a id="more"></a></li>
-<li><strong>查看进程号为5004对应的进程；由下图可以看出，是被mysqld.exe占用了</strong><pre><code>tasklist | findstr &quot;5004&quot;
-mysqld.exe    5004    Services    0    183,404 K
-</code></pre></li>
-<li><strong>结束进程</strong><pre><code>taskkill /f /t /im mysqld.exe
-tasklist /fi &quot;imagename eq mysqld.exe&quot;
-</code></pre></li>
+        <p>In addition to the usual Spring Framework events, such as <code>ContextRefreshedEvent</code>, a SpringApplication sends some additional application events.</p>
+<blockquote>
+<p>Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on those as a @Bean. You can register them with the <code>SpringApplication.addListeners(…​)</code> method or the <code>SpringApplicationBuilder.listeners(…​)</code> method.</p>
+</blockquote>
+<blockquote>
+<p>If you want those listeners to be registered automatically, regardless of the way the application is created, you can add a <code>META-INF/spring.factories</code> file to your project and reference your listener(s) by using the <code>org.springframework.context.ApplicationListener</code> key, as shown in the following example:</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.context.ApplicationListener=\</span><br><span class="line">  cn.lovelimei.event.MyApplicationPreparedEventListener,\</span><br><span class="line">  cn.lovelimei.event.MyApplicationStartedEventListener,\</span><br><span class="line">  cn.lovelimei.event.MyApplicationStartingEventListener,\</span><br><span class="line">  cn.lovelimei.event.MyApplicationReadyEventListener,\</span><br><span class="line">  cn.lovelimei.event.MyApplicationFailedEventListener,\</span><br><span class="line">  cn.lovelimei.event.MyApplicationEnvironmentPreparedEventListener</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.lovelimei.event;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.context.event.ApplicationFailedEvent;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationListener;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplicationFailedEventListener</span> <span class="keyword">implements</span> <span class="title">ApplicationListener</span>&lt;<span class="title">ApplicationFailedEvent</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onApplicationEvent</span><span class="params">(ApplicationFailedEvent event)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"......(6) ApplicationFailedEvent......"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Application events are sent in the following <strong>order</strong>, as your application runs:</p>
+<ol>
+<li>An <strong><code>ApplicationStartingEvent</code></strong> is sent at the start of a run but before any processing, except for the registration of listeners and initializers.</li>
+<li>An <strong><code>ApplicationEnvironmentPreparedEvent</code></strong> is sent when the Environment to be used in the context is known but before the context is created.</li>
+<li>An <strong><code>ApplicationPreparedEvent</code></strong> is sent just before the refresh is started but after bean definitions have been loaded.</li>
+<li>An <strong><code>ApplicationStartedEvent</code></strong> is sent after the context has been refreshed but before any application and command-line runners have been called.</li>
+<li>An <strong><code>ApplicationReadyEvent</code></strong> is sent after any application and command-line runners have been called. It indicates that the application is ready to service requests.</li>
+<li>An <strong><code>ApplicationFailedEvent</code></strong> is sent if there is an exception on startup.</li>
 </ol>
-<h2 id="Linux查看端口占用"><a href="#Linux查看端口占用" class="headerlink" title="Linux查看端口占用"></a>Linux查看端口占用</h2><ol>
-<li><strong>lsof -i:4000</strong></li>
-<li><strong>ps -ef | grep hexo</strong></li>
-</ol>
+<p>You often need not use application events, but it can be handy to know that they exist. Internally, Spring Boot uses events to handle a variety of tasks.</p>
 
       
     </div>
@@ -451,7 +471,7 @@ tasklist /fi &quot;imagename eq mysqld.exe&quot;
       
         <div class="post-tags">
           
-            <a href="/tags/端口占用/" rel="tag"># 端口占用</a>
+            <a href="/tags/SpringBoot/" rel="tag"># SpringBoot</a>
           
         </div>
       
@@ -464,8 +484,8 @@ tasklist /fi &quot;imagename eq mysqld.exe&quot;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/05/Some-tools-to-use-in-your-work/" rel="next" title="工作中常用的一些小工具">
-                <i class="fa fa-chevron-left"></i> 工作中常用的一些小工具
+              <a href="/2018/11/09/cannot-download-sources-spring/" rel="next" title="Maven下载Spring源码报错解决方案">
+                <i class="fa fa-chevron-left"></i> Maven下载Spring源码报错解决方案
               </a>
             
           </div>
@@ -474,8 +494,8 @@ tasklist /fi &quot;imagename eq mysqld.exe&quot;
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/08/让hexo一直在后台运行/" rel="prev" title="<font color=" green"="">让hexo一直在后台运行">
-                <font color="GREEN">让hexo一直在后台运行</font> <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/28/MySQL共享锁与排他锁/" rel="prev" title="MySQL共享锁与排他锁">
+                MySQL共享锁与排他锁 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -521,17 +541,8 @@ tasklist /fi &quot;imagename eq mysqld.exe&quot;
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -667,22 +678,6 @@ tasklist /fi &quot;imagename eq mysqld.exe&quot;
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows查看端口占用"><span class="nav-number">1.</span> <span class="nav-text">Windows查看端口占用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux查看端口占用"><span class="nav-number">2.</span> <span class="nav-text">Linux查看端口占用</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
